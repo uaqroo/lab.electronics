@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/share.css">
+    <link rel="stylesheet" href="../CSS/videos.css">
+    <script src="../JS/share.js"></script>
+</head>
+ 
+<header>
+    <div class="inicio-header">
+        <img src="../assets/uqrooGreen.png" alt="">
+        <h1>Videos</h1>
+
+    </div>
+</header>
+
+<body>
+<div id="sidebar-placeholder"></div>
+    <div class="container"> 
+
+        <section class="video-section">
+
+            <div class="video-container">
+                <div class="Circuitos-container">
+                    <div><h2>PCBs</h2></div>
+                    <div class="video-row">
+                        <div class="video-item">
+                            <div class="video-card" id="video-card1" style="background: url('../assets/video1.png') center/cover; cursor: pointer;">
+                            <div style="   font-size: 60px; color: rgb(3, 66, 0);">▶</div>
+                            </div>
+                            <div class="video-content">
+                                    <h4>PCBs - DISEÑO DEL ESQUEMÁTICO</h4>
+                            </div>
+                        </div>
+
+                        <div class="video-item">
+                         <div class="video-card" id="video-card2" style="background: url('../assets/video2.png') center/cover; cursor: pointer;">
+                        <div style="   font-size: 60px; color: rgb(3, 66, 0);">▶</div>
+                        </div>
+                        <div class="video-content">
+                                <h4>PCBs - HUELLAS</h4>
+                            </div> 
+                        </div>
+                        
+                        <div class="video-item">
+                             <div class="video-card" id="video-card3" style="background: url('../assets/video3.png') center/cover; cursor: pointer;">
+                        <div style="   font-size: 60px; color: rgb(3, 66, 0);">▶</div>
+                        </div>
+                        <div class="video-content">
+                                <h4>PCBs - DISEÑO DE LA PCB</h4>
+                            </div> 
+                            </div>
+
+                            <div class="video-item">
+                             <div class="video-card" id="video-card4" style="background: url('../assets/video4.png') center/cover; cursor: pointer;">
+                        <div style="   font-size: 60px; color: rgb(3, 66, 0);">▶</div>
+                        </div>
+                        <div class="video-content">
+                                <h4>PCBs - Modelos 3D Simbolos y Huellas</h4>
+                            </div>
+                            </div>
+
+                            <div class="video-item">
+                             <div class="video-card" id="video-card5" style="background: url('../assets/video5.png') center/cover; cursor: pointer;">
+                        <div style="   font-size: 60px; color: rgb(3, 66, 0);">▶</div>
+                        </div>
+                        <div class="video-content">
+                                <h4>PCBs - Impresion y salidas de fabricación</h4>
+                            </div> 
+                    </div>
+                    </div>
+                </div>   
+                
+                
+
+                <div class="Circuitos-container">
+                    <div><h2></h2></div>
+                    
+                    <div class="video-row">
+                        <div class="video-item">
+                        <div class="video-card" id="video-card6" style="background: url('../assets/video6.png') center/cover; cursor: pointer;">
+                        <div style="   font-size: 60px; color: rgb(3, 66, 0);">▶</div>
+                        </div>
+                        <div class="video-content">
+                                <h4>Circuitos Logicos</h4>
+                            </div> 
+                            </div>
+                            
+                            <div class="video-item">
+                         <div class="video-card" id="video-card7" style="background: url('../assets/video7.png') center/cover; cursor: pointer;">
+                        <div style="   font-size: 60px; color: rgb(3, 66, 0);">▶</div>
+                        </div>
+                        <div class="video-content">
+                                <h4>Instrumentacion</h4>
+                            </div> 
+                        </div>
+
+                    </div>
+                </div>  
+            </div>
+        </section>
+    </div>
+   
+
+<script>
+
+  function renderVideos(videoID){
+    return `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${videoID}?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`
+
+  }
+  document.getElementById('video-card1').addEventListener('click', function() {
+    // Replace with iframe on click
+    this.innerHTML = renderVideos('H2NI0dYXuAI');
+
+    
+  });
+
+   document.getElementById('video-card2').addEventListener('click', function() {
+    // Replace with iframe on click
+    this.innerHTML = renderVideos('IQMWyzauaKk');
+
+    
+  });
+
+  document.getElementById('video-card3').addEventListener('click', function() {
+    // Replace with iframe on click
+    this.innerHTML = renderVideos('K342zbjpcUc');
+
+    
+  });
+
+   document.getElementById('video-card4').addEventListener('click', function() {
+    // Replace with iframe on click
+    this.innerHTML = renderVideos('ckutldm1tgc');
+
+    
+  });
+
+  document.getElementById('video-card5').addEventListener('click', function() {
+    // Replace with iframe on click
+    this.innerHTML = renderVideos('R_g4x2HJoyc');
+
+    
+  });
+
+   document.getElementById('video-card6').addEventListener('click', function() {
+    // Replace with iframe on click
+    this.innerHTML = renderVideos('WRk1DW9aBI8');
+
+    
+  });
+
+  document.getElementById('video-card7').addEventListener('click', function() {
+    // Replace with iframe on click
+    this.innerHTML = renderVideos('8OVHAQ5oXcQ');
+
+    
+  });
+  
+</script>
+</body>
+</html>

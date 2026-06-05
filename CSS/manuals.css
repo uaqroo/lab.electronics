@@ -1,0 +1,165 @@
+
+.book-image-container {
+    flex-shrink: 0;
+    width: 55px;
+    height: 75px;
+}
+
+.book-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;   /* removes the small inline gap under the image */
+    position: static; /* remove the relative, it's not needed here */
+}
+
+.m-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem 3rem 3rem 4rem;
+    flex: 1;
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.389);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+
+  /* The glassy box-shadow layering */
+  box-shadow:
+    /* Outer shadow for depth */
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    /* Inner top-left highlight (light reflection) */
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    /* Inner bottom-right shadow (inner depth) */
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+
+    margin-top: 210px;
+    height: auto;
+    min-height: 400px;
+    margin-bottom: 100px;
+    border-radius: 16px;
+
+
+    }
+
+    @media (max-width: 768px) {
+        .m-container {
+            margin-top: 120px;
+            padding: 1.25rem 1rem 5rem;
+        }
+
+        .cards-row {
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        }
+    }
+
+    @media (max-width: 480px) {
+        .m-container {
+            margin-top: 100px;
+            padding: 1rem 0.75rem 5rem;
+            border-radius: 10px;
+        }
+
+        .cards-row {
+            grid-template-columns: 1fr;
+        }
+
+        .manual-card {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+.manuals-section {
+    padding-top: 16px;
+}
+
+.manuals-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 8px;
+}
+
+.Circuitos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.Circuitos-container h2 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 4px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.cards-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+}
+
+.manual-card {
+    justify-content: flex-start;
+    background: #062513ad;
+    border-radius: 4px;
+    padding: 8px;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+    gap: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;        
+  flex-direction: row;    
+  align-items: center;    
+ 
+}
+
+.manual-card:hover {
+
+     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.book-content h4 {
+    font-size: 10px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0 0 4px;
+    line-height: 1.4;
+}
+
+.book-meta {
+    font-size: 12px;
+    color: #b1b1b1;
+}
+
+.book-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    margin-top: auto;        /* pushes to bottom without a fixed gap */
+    align-self: flex-start;
+    background-color: #ffffff;
+    border: 1px solid #838383;
+    border-radius: 12px;
+    padding: 5px 12px;       /* you were missing padding! */
+    font-size: 10px;
+    transition: background 0.15s;
+    transition: 0.3s ease;
+}
+
+.book-button a {
+    text-decoration: none;
+    white-space: nowrap;
+    color: #111;
+    font-size: 10px;
+}
+
+.book-button:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
