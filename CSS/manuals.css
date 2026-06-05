@@ -125,6 +125,7 @@
 
 .book-content {
     flex: 1;
+    min-width: 0;
 }
 
 .book-content h4 {
@@ -145,13 +146,13 @@
     align-items: center;
     gap: 2px;
     align-self: center;
+    flex-shrink: 0;
     margin-left: auto;
     background-color: #ffffff;
     border: 1px solid #838383;
     border-radius: 12px;
-    padding: 5px 12px;       /* you were missing padding! */
+    padding: 5px 12px;
     font-size: 10px;
-    transition: background 0.15s;
     transition: 0.3s ease;
 }
 
