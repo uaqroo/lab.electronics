@@ -20,6 +20,12 @@
 
 <body>
 <div id="sidebar-placeholder"></div>
+
+<!-- Fullscreen video modal (used on mobile) -->
+<div id="video-modal">
+    <button id="modal-close" aria-label="Cerrar">✕</button>
+    <div id="modal-video-wrapper"></div>
+</div>
     <div class="container"> 
 
         <section class="video-section">
@@ -107,60 +113,51 @@
    
 
 <script>
+  const videos = {
+    'video-card1': 'H2NI0dYXuAI',
+    'video-card2': 'IQMWyzauaKk',
+    'video-card3': 'K342zbjpcUc',
+    'video-card4': 'ckutldm1tgc',
+    'video-card5': 'R_g4x2HJoyc',
+    'video-card6': 'WRk1DW9aBI8',
+    'video-card7': '8OVHAQ5oXcQ',
+  };
 
-  function renderVideos(videoID){
-    return `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${videoID}?autoplay=1&playsinline=1" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`
-
+  function buildIframe(videoID, playsinline) {
+    const ps = playsinline ? '&playsinline=1' : '';
+    return `<iframe width="100%" height="100%"
+      src="https://www.youtube.com/embed/${videoID}?autoplay=1${ps}"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+      allowfullscreen
+      webkit-allowfullscreen
+      mozallowfullscreen></iframe>`;
   }
-  document.getElementById('video-card1').addEventListener('click', function() {
-    // Replace with iframe on click
-    this.innerHTML = renderVideos('H2NI0dYXuAI');
 
-    
+  const modal = document.getElementById('video-modal');
+  const modalWrapper = document.getElementById('modal-video-wrapper');
+  const modalClose = document.getElementById('modal-close');
+
+  function closeModal() {
+    modal.classList.remove('active');
+    modalWrapper.innerHTML = '';
+  }
+
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) closeModal();
   });
 
-   document.getElementById('video-card2').addEventListener('click', function() {
-    // Replace with iframe on click
-    this.innerHTML = renderVideos('IQMWyzauaKk');
-
-    
+  Object.entries(videos).forEach(([id, videoID]) => {
+    document.getElementById(id).addEventListener('click', function() {
+      if (window.innerWidth <= 768) {
+        modalWrapper.innerHTML = buildIframe(videoID, false);
+        modal.classList.add('active');
+      } else {
+        this.innerHTML = buildIframe(videoID, true);
+      }
+    });
   });
-
-  document.getElementById('video-card3').addEventListener('click', function() {
-    // Replace with iframe on click
-    this.innerHTML = renderVideos('K342zbjpcUc');
-
-    
-  });
-
-   document.getElementById('video-card4').addEventListener('click', function() {
-    // Replace with iframe on click
-    this.innerHTML = renderVideos('ckutldm1tgc');
-
-    
-  });
-
-  document.getElementById('video-card5').addEventListener('click', function() {
-    // Replace with iframe on click
-    this.innerHTML = renderVideos('R_g4x2HJoyc');
-
-    
-  });
-
-   document.getElementById('video-card6').addEventListener('click', function() {
-    // Replace with iframe on click
-    this.innerHTML = renderVideos('WRk1DW9aBI8');
-
-    
-  });
-
-  document.getElementById('video-card7').addEventListener('click', function() {
-    // Replace with iframe on click
-    this.innerHTML = renderVideos('8OVHAQ5oXcQ');
-
-    
-  });
-  
 </script>
 </body>
 </html>
