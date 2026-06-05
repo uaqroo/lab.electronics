@@ -116,6 +116,7 @@
     transition: border-color 0.2s, box-shadow 0.2s;
     flex-direction: row;
     align-items: stretch;
+    overflow: hidden;
 }
 
 .manual-card:hover {
@@ -134,6 +135,8 @@
     color: #ffffff;
     margin: 0 0 4px;
     line-height: 1.4;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .book-meta {
