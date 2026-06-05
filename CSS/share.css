@@ -164,7 +164,7 @@
         font-size: 0.875rem;
         font-weight: 500;
         box-shadow: 0 2px 8px rgba(0,0,0,0.18);
-        transition: background 0.2s ease, transform 0.15s ease;
+        transition: 0.2s ease, transform 0.15s ease;
         white-space: nowrap;
         text-align: center;
     }
@@ -174,9 +174,7 @@
     .side-bar a:hover {
         
     transform: translateY(-2px);
-    box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.224), /* Deeper shadow on hover */
-    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+ 
     color: rgb(255, 255, 255);
 
     }
@@ -230,6 +228,9 @@ margin-top: 19px;
 
     /* Mobile */
     @media (max-width: 768px) {
+        .inicio-header {
+            width: 100%;
+        }
         .row-container {
             flex-direction: column;
         }

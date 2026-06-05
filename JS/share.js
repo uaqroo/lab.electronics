@@ -15,6 +15,8 @@ async function renderSidebar() {
                 data = data.replace('href="books.html"', 'href="HTML/books.html"');
                 data = data.replace('href="videos.html"', 'href="HTML/videos.html"');
                 data = data.replace('href="manuals.html"', 'href="HTML/manuals.html"');
+            } else {
+                data = data.replace('href="index.html"', 'href="../index.html"');
             }
             document.getElementById("sidebar-placeholder").innerHTML = data;
         });
